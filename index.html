@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Irem Koycu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
   <style>
     @keyframes fadeIn {
       from {
@@ -22,37 +22,40 @@
       color: white;
       font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       height: 100vh;
-      display: flex;
-      animation: fadeIn 0.8s ease-out;
       overflow: hidden;
+      display: flex;
+      animation: fadeIn 1s ease-out;
     }
 
+    /* Sidebar - Sol taraf */
     .sidebar {
-      width: 25%;
-      padding: 50px 30px 30px 60px;
+      width: 20%;
+      min-width: 180px;
+      padding: 50px 20px 30px 40px;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: flex-start;
-      justify-content: flex-start; /* yukarı yasladık */
+      box-sizing: border-box;
     }
 
     .name {
-      font-size: 26px; /* biraz daha küçük ve zarif */
-      font-weight: 200; /* çok hafif, bold değil */
-      letter-spacing: 1.5px;
-      margin-bottom: 50px; /* ad ile menü arası boşluk */
+      font-size: 20px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
     }
 
     .menu {
       display: flex;
       flex-direction: column;
-      gap: 20px; /* menü aralığı daha minimal */
+      gap: 15px;
     }
 
     .menu a {
       text-decoration: none;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 200;
       transition: opacity 0.3s ease;
     }
@@ -61,22 +64,23 @@
       opacity: 0.7;
     }
 
+    /* Content - Sağ taraf */
     .content {
-      width: 75%;
+      width: 80%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: black;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     .content img {
-      max-width: 85%; /* büyüttük */
-      max-height: 85%; /* büyüttük */
+      max-width: 90%;
+      max-height: 90%;
       object-fit: contain;
-      margin-top: 20px; /* çok hafif aşağı kaydı */
     }
 
+    /* Responsive ayarlar */
     @media (max-width: 768px) {
       body {
         flex-direction: column;
@@ -92,6 +96,10 @@
       }
       .name {
         margin-bottom: 30px;
+      }
+      .menu {
+        flex-direction: row;
+        gap: 20px;
       }
     }
   </style>
