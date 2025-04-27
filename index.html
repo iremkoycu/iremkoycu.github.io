@@ -9,104 +9,43 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
-            display: flex;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
         .sidebar {
-            width: 220px;
-            background-color: black;
-            padding: 30px 20px;
-            border-right: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            padding: 40px;
         }
         .name {
-            font-size: 24px;
-            font-weight: lighter;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            white-space: nowrap;
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         .menu a {
-            font-size: 16px;
-            color: white;
             text-decoration: none;
-            margin-bottom: 20px;
-            cursor: pointer;
-            display: block;
+            color: white;
+            font-size: 20px;
         }
         .menu a:hover {
             text-decoration: underline;
         }
-        .content {
-            flex-grow: 1;
-            padding: 40px;
-            overflow-y: auto;
-        }
-        .section {
-            display: none;
-        }
-        .section.active {
-            display: block;
-        }
-        a.link {
-            color: white;
-            text-decoration: underline;
-        }
     </style>
-    <script>
-        function showSection(id) {
-            var sections = document.querySelectorAll('.section');
-            sections.forEach(function(section) {
-                section.classList.remove('active');
-            });
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
 </head>
 <body>
 
     <div class="sidebar">
         <div class="name">IREM KOYCU</div>
         <div class="menu">
-            <a href="#" onclick="showSection('about')">ABOUT</a>
-            <a href="#" onclick="showSection('works')">WORKS</a>
-            <a href="#" onclick="showSection('contact')">CONTACT</a>
-        </div>
-    </div>
-
-    <div class="content">
-        <div id="about" class="section">
-            <h1 style="font-weight: bold;">ABOUT | CV</h1>
-            <p>
-                Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
-                <br><br>
-                Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
-                <br><br>
-                Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
-                <br><br>
-                Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. Photography, for her, becomes not merely an act of capturing, but a mode of revealing — a disciplined attunement to the silent forces that shape reality.
-                <br><br>
-                In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
-                <br><br>
-                Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
-            </p>
-        </div>
-
-        <div id="works" class="section">
-            <h1 style="font-weight: bold;">WORKS</h1>
-            <p>Coming soon...</p>
-        </div>
-
-        <div id="contact" class="section">
-            <h1 style="font-weight: bold;">CONTACT</h1>
-            <p>
-                <a href="mailto:zimneyesolntse@gmail.com" class="link">zimneyesolntse@gmail.com</a>
-                <br><br>
-                <a href="https://www.instagram.com/i_do_not_actually_exist" target="_blank" class="link">@i_do_not_actually_exist</a>
-            </p>
+            <a href="about.html">ABOUT</a>
+            <a href="works.html">WORKS</a>
+            <a href="contact.html">CONTACT</a>
         </div>
     </div>
 
