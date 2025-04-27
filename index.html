@@ -3,70 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <title>Irem Koycu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Genel ayarlar */
     body {
       margin: 0;
+      padding: 0;
       background-color: black;
       color: white;
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       height: 100vh;
-      display: flex;
-   .sidebar {
-  width: 30%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-    .name {
-      font-size: 32px;
-      font-weight: 300;
-      letter-spacing: 1.5px;
-      margin-bottom: 80px;
+      overflow: hidden;
     }
-    .menu {
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: black;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .hamburger {
+      cursor: pointer;
+      width: 30px;
+      height: 20px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      justify-content: space-between;
     }
+
+    .hamburger div {
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* Menü */
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transition: right 0.3s ease;
+      font-size: 24px;
+      font-weight: 300;
+    }
+
     .menu a {
       text-decoration: none;
       color: white;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 300;
     }
+
     .menu a:hover {
       text-decoration: underline;
     }
+
+    .menu.active {
+      right: 0;
+    }
+
+    /* İçerik */
     .content {
-      width: 70%;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: black;
+      overflow: hidden;
     }
+
     .content img {
       max-width: 90%;
       max-height: 90%;
       object-fit: contain;
     }
+
+    @media (max-width: 600px) {
+      .navbar .logo {
+        font-size: 20px;
+      }
+      .menu a {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="sidebar">
-    <div class="name">IREM KOYCU</div>
-    <div class="menu">
-      <a href="about.html">ABOUT</a>
-      <a href="works.html">WORKS</a>
-      <a href="contact.html">CONTACT</a>
+  <div class="navbar">
+    <div class="logo">IREM KOYCU</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="about.html">ABOUT</a>
+    <a href="works.html">WORKS</a>
+    <a href="contact.html">CONTACT</a>
   </div>
 
   <div class="content">
     <img src="photo1.JPEG" alt="Irem Koycu Photo">
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
