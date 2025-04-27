@@ -42,9 +42,15 @@
     }
     .content {
       width: 70%;
-      background-image: url('photo1.JPEG');
-      background-size: cover;
-      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+    }
+    .content img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -59,7 +65,9 @@
     </div>
   </div>
 
-  <div class="content"></div>
+  <div class="content">
+    <img src="photo1.JPEG" alt="Irem Koycu Photo">
+  </div>
 
 </body>
 </html>
