@@ -13,11 +13,28 @@
             height: 100vh;
         }
         .sidebar {
-            width: 200px;
+            width: 220px;
             background-color: black;
             padding: 30px 20px;
-            font-weight: bold;
             border-right: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .name {
+            font-size: 24px; /* isim daha büyük */
+            font-weight: normal; /* bold değil */
+            margin-bottom: 40px;
+            letter-spacing: 1px; /* harfler arası hafif boşluk */
+        }
+        .menu a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .menu a:hover {
+            text-decoration: underline;
         }
         .content {
             flex-grow: 1;
@@ -25,23 +42,17 @@
             overflow-y: auto;
             text-align: justify;
         }
-        a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 20px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
     <div class="sidebar">
-        <a href="#">ABOUT | CV</a>
-        <a href="#">WORKS</a>
-        <a href="#">CONTACT</a>
+        <div class="name">IREM KOYCU</div>
+        <div class="menu">
+            <a href="#">ABOUT | CV</a>
+            <a href="#">WORKS</a>
+            <a href="#">CONTACT</a>
+        </div>
     </div>
 
     <div class="content">
