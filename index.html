@@ -22,18 +22,19 @@
             align-items: flex-start;
         }
         .name {
-            font-size: 24px; /* büyüklük aynı */
-            font-weight: lighter; /* daha ince */
+            font-size: 24px;
+            font-weight: lighter;
             margin-bottom: 40px;
             letter-spacing: 1px;
-            text-transform: uppercase; /* büyük harf */
-            white-space: nowrap; /* yan yana kalmasını sağlar */
+            text-transform: uppercase;
+            white-space: nowrap;
         }
         .menu a {
             font-size: 16px;
             color: white;
             text-decoration: none;
             margin-bottom: 20px;
+            cursor: pointer;
         }
         .menu a:hover {
             text-decoration: underline;
@@ -44,6 +45,9 @@
             overflow-y: auto;
             text-align: justify;
         }
+        .section {
+            margin-bottom: 60px;
+        }
     </style>
 </head>
 <body>
@@ -51,27 +55,37 @@
     <div class="sidebar">
         <div class="name">IREM KOYCU</div>
         <div class="menu">
-            <a href="#">ABOUT | CV</a>
-            <a href="#">WORKS</a>
-            <a href="#">CONTACT</a>
+            <a href="#about">ABOUT | CV</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </div>
 
     <div class="content">
-        <h1 style="font-weight: bold;">ABOUT | CV</h1>
-        <p>
-            Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
-            <br><br>
-            Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
-            <br><br>
-            Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
-            <br><br>
-            Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. Photography, for her, becomes not merely an act of capturing, but a mode of revealing — a disciplined attunement to the silent forces that shape reality.
-            <br><br>
-            In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
-            <br><br>
-            Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
-        </p>
+        <div id="about" class="section">
+            <h1 style="font-weight: bold;">ABOUT | CV</h1>
+            <p>
+                Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
+                <br><br>
+                Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
+                <br><br>
+                Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
+                <br><br>
+                Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. Photography, for her, becomes not merely an act of capturing, but a mode of revealing — a disciplined attunement to the silent forces that shape reality.
+                <br><br>
+                In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
+                <br><br>
+                Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
+            </p>
+        </div>
+
+        <div id="contact" class="section">
+            <h1 style="font-weight: bold;">CONTACT</h1>
+            <p>
+                Email: <a href="mailto:zimneyesolntse@gmail.com" style="color:white; text-decoration: underline;">zimneyesolntse@gmail.com</a>
+                <br><br>
+                Instagram: <a href="https://www.instagram.com/i_do_not_actually_exist" target="_blank" style="color:white; text-decoration: underline;">@i_do_not_actually_exist</a>
+            </p>
+        </div>
     </div>
 
 </body>
