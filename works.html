@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Works - Irem Koycu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
     <style>
         @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         body {
@@ -21,12 +21,13 @@
             background-color: black;
             color: white;
             font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-            padding: 60px 40px 40px 40px;
             min-height: 100vh;
+            padding: 60px 40px 40px 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: fadeIn 0.8s ease-out;
+            animation: fadeIn 1s ease-out;
+            box-sizing: border-box;
         }
 
         .nav {
@@ -39,7 +40,7 @@
             color: white;
             text-decoration: none;
             font-size: 18px;
-            font-weight: 300;
+            font-weight: 200;
             transition: opacity 0.3s ease;
         }
 
@@ -49,24 +50,35 @@
 
         h1 {
             font-size: 32px;
-            font-weight: 300;
+            font-weight: 200;
             margin-bottom: 40px;
             letter-spacing: 1.5px;
             text-align: center;
         }
 
-        p {
-            max-width: 800px;
-            font-size: 18px;
-            font-weight: 300;
-            line-height: 1.8;
-            text-align: center;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery img:hover {
+            opacity: 0.8;
         }
 
         @media (max-width: 768px) {
-            p {
-                font-size: 16px;
-                line-height: 1.6;
+            .gallery {
+                grid-template-columns: 1fr; /* küçük ekranlarda tek sütun */
             }
             h1 {
                 font-size: 26px;
@@ -85,9 +97,12 @@
 
     <h1>WORKS</h1>
 
-    <p>
-        Works will be showcased here soon.
-    </p>
+    <div class="gallery">
+        <img src="placeholder1.jpg" alt="Work 1">
+        <img src="placeholder2.jpg" alt="Work 2">
+        <img src="placeholder3.jpg" alt="Work 3">
+        <img src="placeholder4.jpg" alt="Work 4">
+    </div>
 
 </body>
 </html>
