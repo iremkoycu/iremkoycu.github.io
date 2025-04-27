@@ -3,39 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact - Irem Koycu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             background-color: black;
             color: white;
-            font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-            padding: 40px;
+            font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+            padding: 60px 40px 40px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        a {
+
+        .nav {
+            margin-bottom: 60px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
             color: white;
             text-decoration: none;
             font-size: 18px;
             font-weight: 300;
+            transition: opacity 0.3s ease;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .nav a:hover {
+            opacity: 0.7;
         }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+
         .contact-info {
-            margin-top: 40px;
             font-size: 18px;
             font-weight: 300;
-            line-height: 1.6;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 26px;
+            }
+            .contact-info {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html">HOME</a>
-    <a href="about.html" style="margin-left: 20px;">ABOUT</a>
-    <a href="works.html" style="margin-left: 20px;">WORKS</a>
-    <a href="contact.html" style="margin-left: 20px;">CONTACT</a>
+    <div class="nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="works.html">WORKS</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
 
-    <h1 style="margin-top: 40px;">CONTACT</h1>
+    <h1>CONTACT</h1>
 
     <div class="contact-info">
         zimneyesolntse@gmail.com
