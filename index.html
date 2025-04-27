@@ -5,7 +5,7 @@
   <title>Irem Koycu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Genel ayarlar */
+    /* Genel Ayarlar */
     body {
       margin: 0;
       padding: 0;
@@ -19,36 +19,38 @@
     /* Navbar */
     .navbar {
       width: 100%;
-      padding: 20px 30px;
+      height: 60px;
+      background-color: black;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1000;
-      background-color: black;
+      z-index: 10;
     }
 
-    .navbar .logo {
-      font-size: 24px;
+    .logo {
+      font-size: 22px;
       font-weight: 300;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
 
     .hamburger {
-      cursor: pointer;
       width: 30px;
-      height: 20px;
+      height: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      cursor: pointer;
     }
 
-    .hamburger div {
+    .hamburger span {
       height: 3px;
       background: white;
       border-radius: 2px;
+      transition: 0.3s;
     }
 
     /* Menü */
@@ -64,24 +66,22 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
-      transition: right 0.3s ease;
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    .menu a:hover {
-      text-decoration: underline;
+      transition: right 0.4s ease;
     }
 
     .menu.active {
       right: 0;
+    }
+
+    .menu a {
+      color: white;
+      font-size: 24px;
+      font-weight: 300;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
     }
 
     /* İçerik */
@@ -91,18 +91,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
     .content img {
       max-width: 90%;
       max-height: 90%;
       object-fit: contain;
+      margin-top: 80px; /* Navbar yüksekliği kadar boşluk */
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
-      .navbar .logo {
-        font-size: 20px;
+      .logo {
+        font-size: 18px;
       }
       .menu a {
         font-size: 20px;
@@ -115,9 +116,9 @@
   <div class="navbar">
     <div class="logo">IREM KOYCU</div>
     <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 
