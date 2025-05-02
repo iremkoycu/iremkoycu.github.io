@@ -6,14 +6,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
   <style>
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     body {
@@ -22,26 +16,40 @@
       color: #f5f5f5;
       font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
       animation: fadeIn 1s ease-out;
-      padding: 60px 40px;
+      display: flex;
+      min-height: 100vh;
       box-sizing: border-box;
     }
 
-    .nav {
-      margin-bottom: 60px;
+    .sidebar {
+      width: 140px;
+      padding: 60px 30px;
       display: flex;
-      gap: 30px;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 1px solid #222;
     }
 
-    .nav a {
+    .sidebar a {
       color: #f5f5f5;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 200;
       transition: opacity 0.3s ease;
     }
 
-    .nav a:hover {
+    .sidebar a:hover {
       opacity: 0.6;
+    }
+
+    .main {
+      flex: 1;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     .about-wrapper {
@@ -49,9 +57,9 @@
       gap: 60px;
       align-items: flex-start;
       justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto;
       flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
     }
 
     .photo {
@@ -81,65 +89,79 @@
     }
 
     .footer-line {
-      margin-top: 80px;
-      text-align: center;
       font-size: 11px;
       opacity: 0.4;
+      text-align: center;
+      margin-top: 40px;
     }
 
     @media (max-width: 768px) {
-      .about-wrapper {
+      body {
         flex-direction: column;
-        align-items: center;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 1px solid #222;
+        padding: 20px 10px;
+      }
+
+      .main {
+        padding: 40px 20px;
       }
 
       .text {
-        text-align: left;
         font-size: 14px;
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="nav">
+  <div class="sidebar">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="works.html">WORKS</a>
     <a href="contact.html">CONTACT</a>
   </div>
 
-  <div class="about-wrapper">
-    <div class="photo">
-      <img src="about-photo.JPEG" alt="Irem Koycu" />
-    </div>
-
-    <div class="text">
-      Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
-
-      <br><br>
-      Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
-
-      <br><br>
-      Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
-
-      <div class="break">
-        Photography, for her, becomes not merely an act of capturing,<br>
-        but a mode of revealing.
+  <div class="main">
+    <div class="about-wrapper">
+      <div class="photo">
+        <img src="about-photo.JPEG" alt="Irem Koycu" />
       </div>
 
-      Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. It becomes a disciplined attunement to the silent forces that shape reality.
+      <div class="text">
+        Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
 
-      <br><br>
-      In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
+        <br><br>
+        Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
 
-      <br><br>
-      Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
+        <br><br>
+        Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
+
+        <div class="break">
+          Photography, for her, becomes not merely an act of capturing,<br>
+          but a mode of revealing.
+        </div>
+
+        Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. It becomes a disciplined attunement to the silent forces that shape reality.
+
+        <br><br>
+        In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
+
+        <br><br>
+        Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
+      </div>
     </div>
-  </div>
 
-  <div class="footer-line">
-    this page is a still frame from a slow ongoing film.
+    <div class="footer-line">
+      this page is a still frame from a slow ongoing film.
+    </div>
   </div>
 
 </body>
