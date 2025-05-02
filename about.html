@@ -1,129 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About - Irem Koycu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
-    <style>
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  <meta charset="UTF-8" />
+  <title>About - Irem Koycu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-            font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-            padding: 60px 40px;
-            animation: fadeIn 1s ease-out;
-            box-sizing: border-box;
-        }
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #f5f5f5;
+      font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      animation: fadeIn 1s ease-out;
+      padding: 60px 40px;
+      box-sizing: border-box;
+    }
 
-        .nav {
-            margin-bottom: 60px;
-            display: flex;
-            gap: 30px;
-        }
+    .nav {
+      margin-bottom: 60px;
+      display: flex;
+      gap: 30px;
+    }
 
-        .nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 200;
-            transition: opacity 0.3s ease;
-        }
+    .nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 200;
+      transition: opacity 0.3s ease;
+    }
 
-        .nav a:hover {
-            opacity: 0.7;
-        }
+    .nav a:hover {
+      opacity: 0.6;
+    }
 
-        .about-container {
-            display: flex;
-            gap: 60px;
-            align-items: flex-start;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
+    .about-wrapper {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
 
-        .about-photo {
-            flex: 1 1 280px;
-            max-width: 320px;
-        }
+    .photo {
+      flex: 0 0 280px;
+      max-width: 280px;
+    }
 
-        .about-photo img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
+    .photo img {
+      width: 100%;
+      border-radius: 2px;
+      display: block;
+    }
 
-        .caption {
-            font-size: 12px;
-            font-weight: 200;
-            opacity: 0.5;
-            margin-top: 10px;
-        }
+    .text {
+      flex: 1 1 600px;
+      max-width: 600px;
+      font-size: 15px;
+      font-weight: 200;
+      line-height: 1.75;
+      text-align: justify;
+    }
 
-        .about-text {
-            flex: 2 1 500px;
-            font-size: 16px;
-            font-weight: 200;
-            line-height: 1.65;
-            text-align: justify;
-            max-width: 700px;
-            padding-right: 10px;
-        }
+    .break {
+      margin: 30px 0;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
 
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column;
-                align-items: center;
-            }
+    .footer-line {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 11px;
+      opacity: 0.4;
+    }
 
-            .about-text {
-                text-align: left;
-                font-size: 14px;
-                padding-right: 0;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="nav">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="works.html">WORKS</a>
-        <a href="contact.html">CONTACT</a>
+  <div class="nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="works.html">WORKS</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <div class="about-wrapper">
+    <div class="photo">
+      <img src="about-photo.JPEG" alt="Irem Koycu" />
     </div>
 
-    <div class="about-container">
-        <div class="about-photo">
-            <img src="about-photo.JPEG" alt="Irem Koycu Portrait">
-            <div class="caption">photo © Irem Koycu</div>
-        </div>
-        <div class="about-text">
-            Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
-            <br><br>
-            Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
-            <br><br>
-            Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
-            <br><br>
-            Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. Photography, for her, becomes not merely an act of capturing, but a mode of revealing — a disciplined attunement to the silent forces that shape reality.
-            <br><br>
-            In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
-            <br><br>
-            Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
-        </div>
+    <div class="text">
+      Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
+
+      <br><br>
+      Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
+
+      <br><br>
+      Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
+
+      <div class="break">
+        Photography, for her, becomes not merely an act of capturing,<br>
+        but a mode of revealing.
+      </div>
+
+      Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. It becomes a disciplined attunement to the silent forces that shape reality.
+
+      <br><br>
+      In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
+
+      <br><br>
+      Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
     </div>
+  </div>
+
+  <div class="footer-line">
+    this page is a still frame from a slow ongoing film.
+  </div>
 
 </body>
 </html>
