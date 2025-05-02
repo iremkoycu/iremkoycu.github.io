@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>About - Irem Koycu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400&display=swap" rel="stylesheet">
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -12,60 +12,59 @@
 
     body {
       margin: 0;
-      background-color: #111;
-      color: #f5f5f5;
+      background-color: black;
+      color: white;
       font-family: 'Space Grotesk', 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-      animation: fadeIn 1s ease-out;
+      height: 100vh;
       display: flex;
-      min-height: 100vh;
-      box-sizing: border-box;
+      animation: fadeIn 1s ease-out;
+      overflow: hidden;
     }
 
     .sidebar {
-      width: 140px;
-      padding: 60px 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      border-right: 1px solid #222;
-    }
-
-    .sidebar a {
-      color: #f5f5f5;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 200;
-      transition: opacity 0.3s ease;
-    }
-
-    .sidebar a:hover {
-      opacity: 0.6;
-    }
-
-    .main {
-      flex: 1;
-      padding: 60px 80px 60px 60px; /* sola yakınlaştırıldı */
+      width: 30%;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      gap: 60px;
+      box-sizing: border-box;
     }
 
     .name {
       font-size: 32px;
-      font-weight: 200;
+      font-weight: 300;
       letter-spacing: 1.5px;
-      margin-bottom: 20px;
+      margin-bottom: 80px;
     }
 
-    .about-wrapper {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 300;
+      transition: opacity 0.3s ease;
+    }
+
+    .menu a:hover {
+      opacity: 0.6;
+    }
+
+    .content {
+      width: 70%;
+      padding: 60px 60px 60px 0;
       display: flex;
       align-items: flex-start;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 60px;
-      flex-wrap: wrap;
-      width: 100%;
+      overflow-y: auto;
+      box-sizing: border-box;
     }
 
     .photo {
@@ -94,41 +93,27 @@
       letter-spacing: 0.5px;
     }
 
-    .footer-line {
-      font-size: 11px;
-      opacity: 0.4;
-      text-align: center;
-      margin-top: 40px;
-      width: 100%;
-    }
-
     @media (max-width: 768px) {
       body {
         flex-direction: column;
+        overflow: auto;
       }
 
       .sidebar {
         width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        border-right: none;
-        border-bottom: 1px solid #222;
-        padding: 20px 10px;
+        align-items: center;
+        padding: 30px 20px;
       }
 
-      .main {
-        padding: 40px 20px;
+      .content {
+        width: 100%;
+        flex-direction: column;
         align-items: center;
+        padding: 40px 20px;
       }
 
       .name {
-        text-align: center;
-        font-size: 26px;
-      }
-
-      .about-wrapper {
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 40px;
       }
 
       .text {
@@ -141,46 +126,40 @@
 <body>
 
   <div class="sidebar">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="works.html">WORKS</a>
-    <a href="contact.html">CONTACT</a>
+    <div class="name">IREM KOYCU</div>
+    <div class="menu">
+      <a href="about.html">ABOUT</a>
+      <a href="works.html">WORKS</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
   </div>
 
-  <div class="main">
-    <div class="name">IREM KOYCU</div>
-
-    <div class="about-wrapper">
-      <div class="photo">
-        <img src="about-photo.JPEG" alt="Irem Koycu" />
-      </div>
-
-      <div class="text">
-        Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
-
-        <br><br>
-        Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
-
-        <br><br>
-        Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
-
-        <div class="break">
-          Photography, for her, becomes not merely an act of capturing,<br>
-          but a mode of revealing.
-        </div>
-
-        Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. It becomes a disciplined attunement to the silent forces that shape reality.
-
-        <br><br>
-        In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
-
-        <br><br>
-        Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
-      </div>
+  <div class="content">
+    <div class="photo">
+      <img src="about-photo.JPEG" alt="Irem Koycu" />
     </div>
 
-    <div class="footer-line">
-      this page is a still frame from a slow ongoing film.
+    <div class="text">
+      Irem Koycu is a digital visual artist from Turkey, currently studying International Relations at the Faculty of Political Sciences in Ankara.
+
+      <br><br>
+      Her artistic inquiry is anchored in the fragile intersection of abstraction, perception, and the ephemeral nature of lived experience. Through photography, she engages with the unseen currents that shape both the visible and invisible dimensions of existence.
+
+      <br><br>
+      Deeply influenced by psychological landscapes, existential philosophy, and the subtle cadences of the everyday, Irem’s practice transcends conventional representation.
+
+      <div class="break">
+        Photography, for her, becomes not merely an act of capturing,<br>
+        but a mode of revealing.
+      </div>
+
+      Her work traces the fleeting imprints of memory and sensation, revealing latent structures that often elude conscious recognition. It becomes a disciplined attunement to the silent forces that shape reality.
+
+      <br><br>
+      In her ongoing explorations, Irem employs light, shadow, and texture as primary instruments to construct visual meditations on impermanence, dislocation, and the porous boundaries of self and world.
+
+      <br><br>
+      Her images, poised between materiality and disappearance, invite the viewer into contemplative spaces where meaning is neither fixed nor fully graspable, but emerges through presence, intuition, and reverie.
     </div>
   </div>
 
